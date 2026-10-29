@@ -20,7 +20,7 @@
   </script>
   <noscript><div><img src="https://mc.yandex.ru/watch/113894357" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <!-- /Yandex.Metrika counter -->
-  
+
   <style>
     :root {
       --white: #fdfcfb;
@@ -135,7 +135,6 @@
       }
     }
 
-    
     .header-nav {
       position: fixed;
       top: 0;
@@ -287,7 +286,6 @@
       box-shadow: 0 2px 8px rgba(194, 105, 122, 0.3);
     }
 
-    /* На смартфонах кнопка в шапке скрывается, чтобы бургер не обрезался экраном! */
     .btn-header-cta {
       display: none !important;
     }
@@ -629,15 +627,6 @@
       box-shadow: 0 8px 24px rgba(194, 105, 122, 0.1);
     }
 
-    .service-row:last-child {
-      border-bottom: none;
-    }
-
-    .service-row:hover {
-      background: var(--white-2);
-      border-left-color: var(--rose);
-    }
-
     @media (min-width: 768px) {
       .service-row {
         flex-direction: row;
@@ -706,23 +695,6 @@
       font-size: 13px;
       color: var(--ink-soft);
       text-transform: uppercase;
-    }
-
-    .service-arrow {
-      width: 38px;
-      height: 38px;
-      background: var(--stone);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s;
-      color: var(--ink);
-    }
-
-    .service-row:hover .service-arrow {
-      background: var(--rose);
-      color: #ffffff;
-      transform: translateX(4px);
     }
 
     .calc-box {
@@ -850,122 +822,6 @@
       margin-top: 6px;
     }
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-    }
-
-    @media (min-width: 768px) {
-      .gallery-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 16px;
-      }
-    }
-
-    .gallery-card {
-      border: 1px solid var(--border);
-      background: var(--white-2);
-      overflow: hidden;
-      aspect-ratio: 1;
-      position: relative;
-      cursor: pointer;
-    }
-
-    .gallery-card svg {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.4s ease;
-    }
-
-    .gallery-card:hover svg {
-      transform: scale(1.05);
-    }
-
-    .gallery-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(194, 105, 122, 0.35);
-      opacity: 0;
-      transition: opacity 0.3s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-      font-family: "SFMono-Regular", Consolas, monospace;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .gallery-card:hover .gallery-overlay {
-      opacity: 1;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    @media (min-width: 992px) {
-      .about-grid {
-        grid-template-columns: 0.85fr 1.15fr;
-        gap: 60px;
-      }
-    }
-
-    .about-img-box {
-      border: 1px solid var(--border);
-      background: var(--white-2);
-      padding: 10px;
-    }
-
-    .about-img-inner {
-      aspect-ratio: 3/4;
-      background: #eae2d6;
-      overflow: hidden;
-    }
-
-    .about-img-inner svg {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .principles-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-      margin-top: 32px;
-      padding-top: 28px;
-      border-top: 1px solid var(--stone);
-    }
-
-    @media (min-width: 640px) {
-      .principles-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    .principle-tag {
-      font-family: "SFMono-Regular", Consolas, monospace;
-      font-size: 13px;
-      color: var(--rose-deep);
-      text-transform: uppercase;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .principle-text {
-      font-size: 14px;
-      color: var(--ink-soft);
-      line-height: 1.5;
-    }
-
     .reviews-box {
       max-width: 800px;
       margin: 0 auto;
@@ -1042,10 +898,6 @@
       box-shadow: 0 4px 14px rgba(194, 105, 122, 0.15);
     }
 
-    .review-arrow-btn:hover {
-      border-color: var(--ink);
-    }
-
     .review-dots {
       display: flex;
       gap: 8px;
@@ -1068,7 +920,7 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 40px;
-      align-items: start; /* Обеспечивает строгую фиксацию строк: ничего не съезжает вниз при раскрытии */
+      align-items: start;
     }
 
     @media (min-width: 992px) {
@@ -1127,7 +979,6 @@
       transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.25s ease;
     }
 
-    /* ПЛАВНОЕ ВЫЕЗЖАНИЕ ПАНЕЛИ ЧЕРЕЗ GRID-TEMPLATE-ROWS */
     .faq-answer-wrapper {
       display: grid;
       grid-template-rows: 0fr;
@@ -1154,209 +1005,7 @@
 
     .faq-item.active .faq-toggle-icon {
       color: var(--rose);
-      transform: rotate(45deg); /* Плавный поворот плюса в крестик */
-    }
-
-    .booking-strip {
-      background: var(--rose);
-      color: #ffffff;
-      padding: 80px 0;
-      text-align: center;
-    }
-
-    .booking-headline {
-      font-family: "Georgia", serif;
-      font-size: 38px;
-      margin-bottom: 16px;
-      color: #ffffff;
-    }
-
-    @media (min-width: 768px) {
-      .booking-headline {
-        font-size: 52px;
-      }
-    }
-
-    .booking-sub {
-      font-size: 16px;
-      color: rgba(255, 255, 255, 0.9);
-      max-width: 600px;
-      margin: 0 auto 36px;
-      line-height: 1.6;
-    }
-
-    .booking-actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 14px;
-      margin-bottom: 46px;
-    }
-
-    .btn-white-cta {
-      padding: 14px 28px;
-      background: #ffffff;
-      color: var(--rose-deep);
-      font-family: "SFMono-Regular", Consolas, monospace;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-weight: 700;
-    }
-
-    .btn-white-cta:hover {
-      background: var(--white-2);
-    }
-
-    .btn-wa-cta {
-      padding: 14px 28px;
-      border: 1px solid rgba(255, 255, 255, 0.7);
-      background: transparent;
-      color: #ffffff;
-      font-family: "SFMono-Regular", Consolas, monospace;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-
-    .trust-badges-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      padding-top: 36px;
-      border-top: 1px solid rgba(255, 255, 255, 0.25);
-      max-width: 900px;
-      margin: 0 auto;
-      font-family: "SFMono-Regular", Consolas, monospace;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: rgba(255, 255, 255, 0.95);
-    }
-
-    @media (min-width: 768px) {
-      .trust-badges-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
-    .site-footer {
-      background: var(--white);
-      padding: 60px 0 40px;
-      border-top: 1px solid var(--border);
-    }
-
-    .footer-huge-logo {
-      font-family: "Georgia", serif;
-      font-size: 48px;
-      line-height: 1;
-      color: var(--ink);
-      margin-bottom: 40px;
-    }
-
-    @media (min-width: 768px) {
-      .footer-huge-logo {
-        font-size: 68px;
-      }
-    }
-
-    .footer-columns {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 36px;
-      padding-bottom: 40px;
-      border-bottom: 1px solid var(--border);
-      font-size: 14px;
-      color: var(--ink-soft);
-      line-height: 1.6;
-    }
-
-    @media (min-width: 768px) {
-      .footer-columns {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .footer-col-title {
-      font-family: "SFMono-Regular", Consolas, monospace;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--ink);
-      margin-bottom: 14px;
-      font-weight: 700;
-    }
-
-    .footer-col-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .footer-col-links a:hover {
-      color: var(--rose);
-    }
-
-    .legal-requisites-block {
-      padding: 24px;
-      background: var(--white-2);
-      border: 1px solid var(--border-dark);
-      margin-top: 30px;
-      margin-bottom: 24px;
-      font-size: 13px;
-      color: var(--ink);
-      line-height: 1.7;
-    }
-
-    .legal-requisites-block h4 {
-      font-family: "SFMono-Regular", Consolas, monospace;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--ink);
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-
-    .legal-links-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      font-family: "SFMono-Regular", Consolas, monospace;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--ink);
-      margin-bottom: 24px;
-    }
-
-    .legal-links-row a {
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
-
-    .legal-links-row a:hover {
-      color: var(--rose);
-    }
-
-    .footer-bottom {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      padding-top: 24px;
-      font-family: "SFMono-Regular", Consolas, monospace;
-      font-size: 13px;
-      color: var(--ink-soft);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    @media (min-width: 640px) {
-      .footer-bottom {
-        flex-direction: row;
-        justify-content: space-between;
-      }
+      transform: rotate(45deg);
     }
 
     .cookie-banner {
@@ -1549,10 +1198,6 @@
       box-shadow: 0 0 0 3px rgba(194, 105, 122, 0.12);
     }
 
-    .form-control:focus {
-      border-color: var(--rose);
-    }
-
     .checkbox-block {
       display: flex;
       align-items: flex-start;
@@ -1600,53 +1245,6 @@
       padding-left: 22px;
     }
 
-    .mobile-bottom-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: var(--white);
-      border-top: 1px solid var(--border);
-      padding: 10px 16px;
-      display: flex;
-      gap: 10px;
-      z-index: 90;
-      box-shadow: 0 -4px 16px rgba(0,0,0,0.06);
-    }
-
-    @media (min-width: 768px) {
-      .mobile-bottom-bar {
-        display: none;
-      }
-    }
-
-    .mobile-bottom-bar a, .mobile-bottom-bar button {
-      flex: 1;
-      padding: 12px;
-      text-align: center;
-      font-family: "SFMono-Regular", Consolas, monospace;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .btn-mob-primary {
-      background: linear-gradient(135deg, #c97384 0%, #b85b6e 100%);
-      color: #ffffff;
-      font-weight: 700;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(194, 105, 122, 0.3);
-    }
-
-    .btn-mob-secondary {
-      border: 1px solid var(--border);
-      background: var(--white);
-      color: var(--ink);
-      font-weight: 600;
-      border-radius: 12px;
-    }
-  
-    /* СТИЛИ КОРЗИНЫ И КНОПОК ДОБАВЛЕНИЯ */
     .btn-add-cart {
       display: inline-flex;
       align-items: center;
@@ -1681,20 +1279,6 @@
       transform: scale(0.98);
     }
 
-    .btn-add-cart:hover {
-      background: var(--rose);
-      border-color: var(--rose);
-      color: #ffffff;
-      transform: translateY(-1px);
-    }
-
-    .btn-add-cart.added {
-      background: var(--rose-light);
-      border-color: var(--rose);
-      color: var(--rose-deep);
-    }
-
-    /* Плавающая кнопка корзины в правом углу */
     .floating-cart-btn {
       position: fixed;
       bottom: 24px;
@@ -1745,7 +1329,6 @@
       font-weight: 800;
     }
 
-    /* Карточки заказа и детализации */
     .order-summary-card {
       background: var(--white-2);
       border: 1px solid var(--border);
@@ -1780,20 +1363,30 @@
       color: var(--rose-deep);
     }
 
-  
-    @keyframes photoTickerAnim {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+    @media (min-width: 992px) {
+      .ref-contact-grid {
+        grid-template-columns: 1fr 1.15fr !important;
+      }
+      .ref-footer-grid {
+        grid-template-columns: 1.2fr 1.3fr 1fr !important;
+      }
+      .ref-footer-center {
+        text-align: center !important;
+      }
+      .ref-footer-right {
+        text-align: right !important;
+      }
     }
-    .photo-ticker-track:hover {
-      animation-play-state: paused;
+    @media (max-width: 991px) {
+      .ref-footer-center, .ref-footer-right {
+        text-align: left !important;
+      }
     }
-
   </style>
 </head>
 <body>
 
-  <!-- 1. ВСПЛЫВАЮЩИЙ COOKIE-БАННЕР (РКН 2026 / 152-ФЗ / ч. 2 ст. 13.11 КоАП РФ) -->
+  <!-- 1. ВСПЛЫВАЮЩИЙ COOKIE-БАННЕР -->
   <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Согласие на использование файлов cookie">
     <div class="cookie-banner-inner">
       <div class="cookie-text">
@@ -1902,7 +1495,8 @@
               <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(28,25,23,0.35) 0%, transparent 60%);"></div>
               <div style="position:absolute; bottom:16px; left:16px; color:#ffffff; font-family:'Georgia', serif; font-size:16px; font-style:italic; text-shadow:0 2px 8px rgba(0,0,0,0.4);">
                 Evelina's Nails · Пятигорск
-              </div></div>
+              </div>
+            </div>
             <div class="hero-floating-badge">
               <div style="font-family:'SFMono-Regular', monospace; font-size:13px; text-transform:uppercase; color:var(--ink-soft); font-weight:600;">Гарантия на работу</div>
               <div style="font-family:'Georgia', serif; font-size:20px; color:var(--ink);">Стойкость до 4 недель</div>
@@ -1927,7 +1521,7 @@
     </div>
   </div>
 
-  <!-- 5. УСЛУГИ И ПРАЙС-ЛИСТ (§ 01) -->
+  <!-- 5. УСЛУГИ И ПРАЙС-ЛИСТ -->
   <section id="services" class="section-wrap">
     <div class="container">
       <div class="section-header">
@@ -1942,7 +1536,7 @@
         </p>
       </div>
 
-            <div class="services-table">
+      <div class="services-table">
         <div class="service-row">
           <div class="service-left">
             <span class="service-num">01</span>
@@ -2102,7 +1696,7 @@
     </div>
   </section>
 
-  <!-- 6. ИНТЕРАКТИВНЫЙ КАЛЬКУЛЯТОР (§ 02) -->
+  <!-- 6. ИНТЕРАКТИВНЫЙ КАЛЬКУЛЯТОР -->
   <section id="calc" class="section-wrap" style="background-color: var(--white-2);">
     <div class="container">
       <div class="section-header">
@@ -2208,7 +1802,7 @@
     </div>
   </section>
 
-  <!-- 9. ОТЗЫВЫ КЛИЕНТОВ (§ 05) -->
+  <!-- 7. ОТЗЫВЫ КЛИЕНТОВ -->
   <section id="reviews" class="section-wrap">
     <div class="container">
       <div class="reviews-box">
@@ -2240,66 +1834,9 @@
         </div>
       </div>
     </div>
-  
-      <!-- БЕСКОНЕЧНАЯ БЕГУЩАЯ ФОТОЛЕНТА РАБОТ ДОВОЛЬНЫХ КЛИЕНТОВ (8 РЕАЛЬНЫХ ФОТО ИЗ ЯНДЕКСА) -->
-      <div style="margin-top:50px; overflow:hidden; position:relative; width:100%; border-radius:18px; padding:10px 0;">
-        <div style="font-family:'SFMono-Regular', monospace; font-size:12px; text-transform:uppercase; color:var(--ink-soft); letter-spacing:0.1em; text-align:center; margin-bottom:18px;">
-          ✦ Фотографии недавних работ студии ✦
-        </div>
-
-        <div class="photo-ticker-track" style="display:flex; gap:16px; width:max-content; animation: photoTickerAnim 32s linear infinite;">
-          <!-- 1 -->
-          <div style="width:200px; height:240px; border-radius:16px; overflow:hidden; border:1px solid var(--border); box-shadow:0 4px 14px rgba(0,0,0,0.03); flex-shrink:0;">
-            <img src="https://avatars.mds.yandex.net/get-altay/17681761/2a0000019eef9cbb4ec138748d97f258114b/XXL_height" alt="Работа студии Evelina's Nails" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
-          </div>
-          <!-- 2 -->
-          <div style="width:200px; height:240px; border-radius:16px; overflow:hidden; border:1px solid var(--border); box-shadow:0 4px 14px rgba(0,0,0,0.03); flex-shrink:0;">
-            <img src="https://avatars.mds.yandex.net/get-altay/16411237/2a0000019b2c377ff7be8af6e32add25aa95/XXL_height" alt="Идеальный маникюр" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
-          </div>
-          <!-- 3 -->
-          <div style="width:200px; height:240px; border-radius:16px; overflow:hidden; border:1px solid var(--border); box-shadow:0 4px 14px rgba(0,0,0,0.03); flex-shrink:0;">
-            <img src="https://avatars.mds.yandex.net/get-altay/19803395/2a0000019c37e82735e42c3a21bdc591b66b/XXL_height" alt="Укрепление гелем" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
-          </div>
-          <!-- 4 -->
-          <div style="width:200px; height:240px; border-radius:16px; overflow:hidden; border:1px solid var(--border); box-shadow:0 4px 14px rgba(0,0,0,0.03); flex-shrink:0;">
-            <img src="https://avatars.mds.yandex.net/get-altay/18148618/2a0000019d33964610c7439cd5af341b7057/XXL_height" alt="Студия Evelina's Nails" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
-          </div>
-          <!-- 5 -->
-          <div style="width:200px; height:240px; border-radius:16px; overflow:hidden; border:1px solid var(--border); box-shadow:0 4px 14px rgba(0,0,0,0.03); flex-shrink:0;">
-            <img src="https://avatars.mds.yandex.net/get-altay/17681761/2a0000019eef9cbb4ec138748d97f258114b/M_height" alt="Гелевое моделирование" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
-          </div>
-          <!-- 6 -->
-          <div style="width:200px; height:240px; border-radius:16px; overflow:hidden; border:1px solid var(--border); box-shadow:0 4px 14px rgba(0,0,0,0.03); flex-shrink:0;">
-            <img src="https://avatars.mds.yandex.net/get-altay/16411237/2a0000019b2c377ff7be8af6e32add25aa95/M_height" alt="Чистая кутикула" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
-          </div>
-          <!-- 7 -->
-          <div style="width:200px; height:240px; border-radius:16px; overflow:hidden; border:1px solid var(--border); box-shadow:0 4px 14px rgba(0,0,0,0.03); flex-shrink:0;">
-            <img src="https://avatars.mds.yandex.net/get-altay/19803395/2a0000019c37e82735e42c3a21bdc591b66b/M_height" alt="Эстетичный педикюр" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
-          </div>
-          <!-- 8 -->
-          <div style="width:200px; height:240px; border-radius:16px; overflow:hidden; border:1px solid var(--border); box-shadow:0 4px 14px rgba(0,0,0,0.03); flex-shrink:0;">
-            <img src="https://avatars.mds.yandex.net/get-altay/18148618/2a0000019d33964610c7439cd5af341b7057/M_height" alt="Нюдовый френч" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
-          </div>
-
-          <!-- Дублируем для плавного бесконечного цикла -->
-          <div style="width:200px; height:240px; border-radius:16px; overflow:hidden; border:1px solid var(--border); box-shadow:0 4px 14px rgba(0,0,0,0.03); flex-shrink:0;">
-            <img src="https://avatars.mds.yandex.net/get-altay/17681761/2a0000019eef9cbb4ec138748d97f258114b/XXL_height" alt="Работа студии" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
-          </div>
-          <div style="width:200px; height:240px; border-radius:16px; overflow:hidden; border:1px solid var(--border); box-shadow:0 4px 14px rgba(0,0,0,0.03); flex-shrink:0;">
-            <img src="https://avatars.mds.yandex.net/get-altay/16411237/2a0000019b2c377ff7be8af6e32add25aa95/XXL_height" alt="Маникюр" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
-          </div>
-          <div style="width:200px; height:240px; border-radius:16px; overflow:hidden; border:1px solid var(--border); box-shadow:0 4px 14px rgba(0,0,0,0.03); flex-shrink:0;">
-            <img src="https://avatars.mds.yandex.net/get-altay/19803395/2a0000019c37e82735e42c3a21bdc591b66b/XXL_height" alt="Гель" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
-          </div>
-          <div style="width:200px; height:240px; border-radius:16px; overflow:hidden; border:1px solid var(--border); box-shadow:0 4px 14px rgba(0,0,0,0.03); flex-shrink:0;">
-            <img src="https://avatars.mds.yandex.net/get-altay/18148618/2a0000019d33964610c7439cd5af341b7057/XXL_height" alt="Педикюр" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
-          </div>
-        </div>
-      </div>
-
   </section>
 
-  <!-- 10. FAQ ВОПРОСЫ И ОТВЕТЫ (§ 06) -->
+  <!-- 8. FAQ ВОПРОСЫ И ОТВЕТЫ -->
   <section id="faq" class="section-wrap" style="background-color: var(--white-2);">
     <div class="container">
       <div class="faq-grid">
@@ -2391,7 +1928,7 @@
     </div>
   </section>
 
-      <!-- 11. СЕКЦИЯ КОНТАКТОВ И КАРТЫ (СВЕТЛЫЙ ФИРМЕННЫЙ ДИЗАЙН САЙТА С НАПОЛНЕНИЕМ РЕФЕРЕНСА) -->
+  <!-- 9. СЕКЦИЯ КОНТАКТОВ И КАРТЫ -->
   <section id="contacts" class="section-wrap" style="background: var(--white-2);">
     <div class="container">
       <div class="section-header" style="margin-bottom:36px;">
@@ -2407,11 +1944,7 @@
       </div>
 
       <div style="display:grid; grid-template-columns: 1fr; gap: 36px; align-items: stretch;" class="ref-contact-grid">
-        
-        <!-- Левая колонка контактов -->
         <div style="display:flex; flex-direction:column; gap:22px; justify-content:center;">
-          
-          <!-- Телефон -->
           <div style="display:flex; align-items:center; gap:16px; padding:16px; background:var(--white); border:1px solid var(--border); border-radius:14px; box-shadow:0 2px 8px rgba(0,0,0,0.02);">
             <div style="width:48px; height:48px; background:var(--white-2); border:1px solid var(--border); border-radius:12px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--rose)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2424,7 +1957,6 @@
             </div>
           </div>
 
-          <!-- Email -->
           <div style="display:flex; align-items:center; gap:16px; padding:16px; background:var(--white); border:1px solid var(--border); border-radius:14px; box-shadow:0 2px 8px rgba(0,0,0,0.02);">
             <div style="width:48px; height:48px; background:var(--white-2); border:1px solid var(--border); border-radius:12px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--rose)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2438,7 +1970,6 @@
             </div>
           </div>
 
-          <!-- Режим работы -->
           <div style="display:flex; align-items:center; gap:16px; padding:16px; background:var(--white); border:1px solid var(--border); border-radius:14px; box-shadow:0 2px 8px rgba(0,0,0,0.02);">
             <div style="width:48px; height:48px; background:var(--white-2); border:1px solid var(--border); border-radius:12px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--rose)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2452,7 +1983,6 @@
             </div>
           </div>
 
-          <!-- Социальные сети -->
           <div style="padding-top:4px;">
             <div style="font-family:'SFMono-Regular', Consolas, monospace; font-size:12px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px;">Социальные сети</div>
             <div style="display:flex; gap:10px;">
@@ -2472,13 +2002,9 @@
               </a>
             </div>
           </div>
-
         </div>
 
-        <!-- Правая колонка: Интерактивная карта и отдельный блок адреса ниже -->
         <div style="display:flex; flex-direction:column; gap:14px; width:100%;">
-          
-          <!-- Окно карты (с полным отсечением нижней рекламы Яндекса) -->
           <div style="position:relative; width:100%; height:360px; border:1px solid var(--border); border-radius:18px; background:var(--white); overflow:hidden; box-shadow:0 4px 16px rgba(0,0,0,0.03);">
             <iframe 
               src="https://yandex.ru/map-widget/v1/?ll=43.050682%2C44.032479&z=16&pt=43.050682,44.032479,pm2rdm" 
@@ -2491,7 +2017,6 @@
             </iframe>
           </div>
 
-          <!-- Блок с адресом и маршрутом строго ПОД картой -->
           <div style="background:var(--white); border:1px solid var(--border); border-radius:16px; padding:18px 22px; box-shadow:0 2px 10px rgba(0,0,0,0.02); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px;">
             <div>
               <div style="font-family:'Georgia', serif; font-size:18px; font-weight:700; color:var(--ink); display:flex; align-items:center; gap:6px;">
@@ -2510,19 +2035,15 @@
               Построить маршрут ↗
             </a>
           </div>
-
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- 12. ПОДВАЛ В ФИРМЕННОМ СВЕТЛОМ ДИЗАЙНЕ САЙТА (СТРУКТУРА И ДАННЫЕ РЕФЕРЕНСА) -->
+  <!-- 10. ПОДВАЛ -->
   <footer style="background:var(--white); color:var(--ink-soft); border-top:1px solid var(--border); padding:34px 0 44px; font-size:13px; line-height:1.6;">
     <div class="container">
       <div style="display:grid; grid-template-columns:1fr; gap:20px; align-items:center;" class="ref-footer-grid">
-        
-        <!-- Слева: Логотип и копирайт -->
         <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
           <div style="font-family:'Georgia', serif; font-size:20px; font-weight:800; color:var(--ink); letter-spacing:-0.02em; display:flex; align-items:center; gap:6px;">
             <span>EVELINA’S NAILS</span>
@@ -2533,174 +2054,23 @@
           </div>
         </div>
 
-        <!-- По центру: Реквизиты ИП (соответствие ст. 14.5 КоАП РФ, ст. 9 Закона № 149-ФЗ) -->
         <div style="color:var(--ink); font-size:13px; text-align:center;" class="ref-footer-center">
           ИП Ковалёв В. М. &nbsp;|&nbsp; ИНН 263007891234 &nbsp;|&nbsp; ОГРНИП 325265100012345
         </div>
 
-        <!-- Справа: Ссылки на документы -->
         <div style="display:flex; flex-direction:column; gap:6px; text-align:right;" class="ref-footer-right">
-          <a href="https://ema-detailing64.ru/#privacy" onclick="openModal('privacyModal'); return false;" style="color:var(--ink); text-decoration:none; font-weight:500;" onmouseover="this.style.color='var(--rose)'" onmouseout="this.style.color='var(--ink)'">
+          <a href="#privacy" onclick="openModal('privacyModal'); return false;" style="color:var(--ink); text-decoration:none; font-weight:500;">
             Политика конфиденциальности
           </a>
-          <a href="https://ema-detailing64.ru/#cookies" onclick="openModal('cookiePolicyModal'); return false;" style="color:var(--ink); text-decoration:none; font-weight:500;" onmouseover="this.style.color='var(--rose)'" onmouseout="this.style.color='var(--ink)'">
+          <a href="#cookies" onclick="openModal('cookiePolicyModal'); return false;" style="color:var(--ink); text-decoration:none; font-weight:500;">
             Правила использования cookie
           </a>
         </div>
-
       </div>
     </div>
   </footer>
 
-  <style>
-    @media (min-width: 992px) {
-      .ref-contact-grid {
-        grid-template-columns: 1fr 1.15fr !important;
-      }
-      .ref-footer-grid {
-        grid-template-columns: 1.2fr 1.3fr 1fr !important;
-      }
-      .ref-footer-center {
-        text-align: center !important;
-      }
-      .ref-footer-right {
-        text-align: right !important;
-      }
-    }
-    @media (max-width: 991px) {
-      .ref-footer-center, .ref-footer-right {
-        text-align: left !important;
-      }
-    }
-  
-    /* СТИЛИ КОРЗИНЫ И КНОПОК ДОБАВЛЕНИЯ */
-    .btn-add-cart {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 18px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      color: var(--ink);
-      font-family: 'SFMono-Regular', Consolas, monospace;
-      font-size: 12px;
-      text-transform: uppercase;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      white-space: nowrap;
-    }
-
-    .btn-add-cart:hover {
-      background: var(--rose);
-      border-color: var(--rose);
-      color: #ffffff;
-      transform: translateY(-1px);
-    }
-
-    .btn-add-cart.added {
-      background: var(--rose-light);
-      border-color: var(--rose);
-      color: var(--rose-deep);
-    }
-
-    /* Плавающая кнопка корзины в правом углу */
-    .floating-cart-btn {
-      position: fixed;
-      bottom: 24px;
-      right: 20px;
-      z-index: 95;
-      background: var(--rose);
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      padding: 12px 20px;
-      border-radius: 30px;
-      box-shadow: 0 10px 25px rgba(194, 105, 122, 0.45);
-      display: none;
-      align-items: center;
-      gap: 12px;
-      cursor: pointer;
-      font-family: 'SFMono-Regular', Consolas, monospace;
-      font-size: 13px;
-      font-weight: 700;
-      transition: all 0.25s ease;
-    }
-
-    @media (min-width: 768px) {
-      .floating-cart-btn {
-        bottom: 30px;
-        right: 30px;
-      }
-    }
-
-    .floating-cart-btn:hover {
-      background: var(--rose-deep);
-      transform: scale(1.04);
-    }
-
-    .floating-cart-btn.show {
-      display: flex;
-    }
-
-    .cart-badge {
-      background: #ffffff;
-      color: var(--rose-deep);
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      font-weight: 800;
-    }
-
-    /* Карточки заказа и детализации */
-    .order-summary-card {
-      background: var(--white-2);
-      border: 1px solid var(--border);
-      padding: 16px;
-      margin-bottom: 18px;
-    }
-
-    .order-summary-row {
-      display: flex;
-      justify-content: space-between;
-      font-size: 13.5px;
-      color: var(--ink);
-      padding: 4px 0;
-    }
-
-    .order-summary-total {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding-top: 10px;
-      margin-top: 8px;
-      border-top: 1px dashed var(--border-dark);
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--ink);
-    }
-
-    .order-summary-total span.price {
-      font-family: 'Georgia', serif;
-      font-size: 22px;
-      color: var(--rose-deep);
-    }
-
-  
-    @keyframes photoTickerAnim {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .photo-ticker-track:hover {
-      animation-play-state: paused;
-    }
-
-  </style>
-
-  <!-- 14. МОДАЛЬНОЕ ОКНО 1: ОНЛАЙН-ЗАПИСЬ (СООТВЕТСТВИЕ ч. 2 ст. 13.11 КоАП РФ: ПУСТЫЕ ЧЕКБОКСЫ, РАЗДЕЛЬНЫЕ) -->
+  <!-- 11. МОДАЛЬНОЕ ОКНО: ОНЛАЙН-ЗАПИСЬ -->
   <div id="bookingModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle">
     <div class="modal-window">
       <button type="button" class="modal-close-btn" onclick="closeModal('bookingModal')" aria-label="Закрыть окно">×</button>
@@ -2708,10 +2078,6 @@
       <h3 id="bookingModalTitle" class="modal-title">Онлайн-запись к мастеру</h3>
       
       <form id="bookingForm" action="javascript:void(0)" method="POST" onsubmit="handleBookingSubmit(event)">
-        <!-- Технические поля фиксации для CRM и аудита Роскомнадзора (ст. 9 Закона № 152-ФЗ) -->
-        <input type="hidden" id="auditTimestamp" name="audit_timestamp" value="">
-        <input type="hidden" id="auditClientIp" name="audit_client_ip" value="127.0.0.1">
-        <input type="hidden" id="auditConsentVersion" name="audit_consent_version" value="2026.1-ФЗ152">
         <div class="form-group">
           <label class="form-label" for="bookService">Выбранная услуга / тип заказа</label>
           <select id="bookService" class="form-control" required onchange="handleServiceSelectChange(this)">
@@ -2725,7 +2091,6 @@
           </select>
         </div>
 
-        <!-- ДЕТАЛИЗАЦИЯ ЗАКАЗА И ТОЧНАЯ ИТОГОВАЯ СУММА -->
         <div id="bookingOrderSummary" class="order-summary-card" style="display:none;">
           <div style="font-family:'SFMono-Regular', monospace; font-size:11px; text-transform:uppercase; color:var(--rose-deep); font-weight:700; margin-bottom:8px;" id="orderSummaryTag">
             Детали вашего заказа:
@@ -2755,213 +2120,116 @@
           <input type="datetime-local" id="clientDate" class="form-control">
         </div>
 
-        <!-- Раздельные согласия: без предустановленных галочек, шрифт 13px, контрастный текст -->
         <div class="checkbox-block">
           <input type="checkbox" id="consentPdCheckbox" required>
           <label for="consentPdCheckbox">
-            Я подтверждаю своё ознакомление и даю <strong>согласие на обработку персональных данных</strong> (имени и номера телефона) в соответствии с требованиями Федерального закона № 152-ФЗ и <a href="javascript:void(0)" onclick="openModal('privacyModal')">Политикой конфиденциальности</a> для связи и подтверждения записи. *
+            Я даю <strong>согласие на обработку персональных данных</strong> в соответствии с <a href="javascript:void(0)" onclick="openModal('privacyModal')">Политикой конфиденциальности</a>. *
           </label>
         </div>
 
         <div class="checkbox-block">
           <input type="checkbox" id="consentTermsCheckbox" required>
           <label for="consentTermsCheckbox">
-            Я принимаю условия <a href="javascript:void(0)" onclick="openModal('userAgreementModal')">Пользовательского соглашения и Публичной оферты</a> оказания услуг. *
+            Я принимаю условия <a href="javascript:void(0)" onclick="openModal('userAgreementModal')">Пользовательского соглашения и Публичной оферты</a>. *
           </label>
         </div>
 
-        <div class="checkbox-block">
-          <input type="checkbox" id="consentAdCheckbox">
-          <label for="consentAdCheckbox">
-            Я согласен(на) получать напоминания о записи и сервисные сообщения в мессенджерах (ст. 18 ФЗ «О рекламе»).
-          </label>
+        <div style="display:flex; flex-direction:column; gap:10px; margin-top:10px;">
+          <!-- Кнопка WhatsApp -->
+          <button type="button" class="btn-cta" style="width:100%; padding:14px; background:linear-gradient(135deg, #25D366 0%, #128C7E 100%); box-shadow:0 4px 16px rgba(37, 211, 102, 0.3); display:flex; align-items:center; justify-content:center; gap:8px;" onclick="sendBooking('whatsapp')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            <span>ОТПРАВИТЬ ЗАЯВКУ В WHATSAPP →</span>
+          </button>
+          
+          <!-- Кнопка Telegram -->
+          <button type="button" class="btn-cta" style="width:100%; padding:14px; background:linear-gradient(135deg, #2AABEE 0%, #229ED9 100%); box-shadow:0 4px 16px rgba(42, 171, 238, 0.3); display:flex; align-items:center; justify-content:center; gap:8px;" onclick="sendBooking('telegram')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            <span>ОТПРАВИТЬ ЗАЯВКУ В TELEGRAM →</span>
+          </button>
         </div>
-
-        <button type="submit" class="btn-cta" style="width:100%; padding:14px; margin-top:10px;">
-          Отправить заявку мастеру →
-        </button>
-
-        <p style="font-family:'SFMono-Regular', monospace; font-size:13px; color:var(--ink-soft); text-align:center; margin-top:14px; line-height:1.4;">
-          Или оформите бронь сразу в диалоге: <br>
-          <a href="https://wa.me/79620225472" target="_blank" rel="noopener noreferrer" style="color:var(--rose-deep); text-decoration:underline; font-weight:600;">
-            Написать Эвелине в WhatsApp (+7 962 022-54-72)
-          </a>
-        </p>
       </form>
     </div>
   </div>
 
-  <!-- 15. МОДАЛЬНОЕ ОКНО 2: ПОЛИТИКА ОБРАБОТКИ ПДН (152-ФЗ) В РЕДАКЦИИ 2026 Г. -->
+  <!-- 12. МОДАЛЬНОЕ ОКНО: ПОЛИТИКА ПДН -->
   <div id="privacyModal" class="modal-overlay" role="dialog" aria-modal="true">
     <div class="modal-window">
       <button type="button" class="modal-close-btn" onclick="closeModal('privacyModal')">×</button>
-      <div class="modal-header-tag">Юридический документ РФ</div>
+      <div class="modal-header-tag">Юридический документ</div>
       <h3 class="modal-title">Политика обработки персональных данных</h3>
       <div class="modal-legal-doc-content">
-        <p><strong>Редакция от 2026 года. Действует для сайта студии Evelina's Nails (г. Пятигорск).</strong></p>
-        
-        <h3>1. Общие положения и правовые основания</h3>
-        <p>Настоящая Политика составлена в соответствии с требованиями Федерального закона от 27.07.2006 № 152-ФЗ «О персональных данных». Оператором является ИП Ковалёв Владислав Максимович (ИНН 263007891234, ОГРНИП 325265100012345), адрес: Ставропольский край, г. Пятигорск, ул. Оранжерейная, д. 17к3.</p>
-
-        <h3>2. Точные цели сбора и обработки данных</h3>
-        <ul>
-          <li>Обработка входящих обращений и предварительная запись на косметические услуги ногтевого сервиса;</li>
-          <li>Индивидуальное согласование даты, времени и объёма процедур через телефон и защищённые мессенджеры;</li>
-          <li>Информирование о статусе визита.</li>
-        </ul>
-
-        <h3>3. Категории собираемых данных (принцип минимизации)</h3>
-        <p>Оператор собирает исключительно минимально необходимый объём сведений:</p>
-        <ul>
-          <li>Имя субъекта персональных данных;</li>
-          <li>Контактный номер мобильного телефона;</li>
-          <li>Обезличенные технические параметры сессии (файлы cookie, IP-адрес для защиты формы).</li>
-        </ul>
-
-        <h3>4. Использование файлов Cookie и трекинга</h3>
-        <p>Сайт использует только строго необходимые технические файлы cookie, обеспечивающие функционирование интерактивных модулей (калькулятор расчёта, запоминание настроек сессии). Сторонние трекинговые пиксели зарубежных компаний (включая запрещённые продукты Meta и сервисы Google) на сайте отсутствуют.</p>
-
-        <h3>5. Локализация баз данных</h3>
-        <p>В строгом соответствии с ч. 5 ст. 18 Закона № 152-ФЗ хранение и систематизация баз данных осуществляются исключительно в дата-центрах на территории Российской Федерации (ООО «Таймвэб», Санкт-Петербург). Трансграничная передача персональных данных не производится.</p>
-
-        <h3>6. Порядок уничтожения данных</h3>
-        <p>Данные уничтожаются по достижении целей обработки либо при отзыве согласия субъектом. Запрос на уничтожение направляется на электронную почту info@evelinas-nails.ru и выполняется в течение 10 рабочих дней.</p>
+        <p>Настоящая Политика составлена в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ. Оператор — ИП Ковалёв В. М., адрес: Ставропольский край, г. Пятигорск, ул. Оранжерейная, д. 17к3.</p>
+        <p>Обработка данных (имя, номер телефона) ведется исключительно для подтверждения записи и консультации по услугам ногтевого сервиса.</p>
       </div>
     </div>
   </div>
 
-      <!-- МОДАЛЬНОЕ ОКНО НАСТРОЕК COOKIE В ФИРМЕННОМ СВЕТЛОМ ДИЗАЙНЕ САЙТА (ПОЛНОЕ НАПОЛНЕНИЕ РЕФЕРЕНСА) -->
+  <!-- 13. МОДАЛЬНОЕ ОКНО: COOKIE -->
   <div id="cookiePolicyModal" class="modal-overlay" role="dialog" aria-modal="true">
     <div class="modal-window" style="max-width:620px; padding:32px 28px;">
-      
-      <!-- Крестик закрытия -->
-      <button type="button" class="modal-close-btn" onclick="closeModal('cookiePolicyModal')" aria-label="Закрыть">
-        ×
-      </button>
-
-      <!-- Хедер -->
-      <div style="display:flex; align-items:center; gap:6px; font-family:'SFMono-Regular', Consolas, monospace; font-size:12px; color:var(--rose-deep); font-weight:700; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;">
-        <span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--rose);"></span>
-        КОНФИГУРАЦИЯ БЕЗОПАСНОСТИ
+      <button type="button" class="modal-close-btn" onclick="closeModal('cookiePolicyModal')">×</button>
+      <div style="font-family:'SFMono-Regular', monospace; font-size:12px; color:var(--rose-deep); font-weight:700; text-transform:uppercase; margin-bottom:6px;">КОНФИГУРАЦИЯ БЕЗОПАСНОСТИ</div>
+      <h2 style="font-family:'Georgia', serif; font-size:24px; font-weight:700; color:var(--ink); margin-bottom:18px;">НАСТРОЙКИ ФАЙЛОВ COOKIE</h2>
+      <div style="font-size:13.5px; color:var(--ink-soft); line-height:1.55; margin-bottom:18px;">
+        Мы используем необходимые технические и аналитические cookie (Яндекс.Метрика) для стабильной работы сайта и подсчета посещений.
       </div>
-      <h2 style="font-family:'Georgia', serif; font-size:24px; font-weight:700; color:var(--ink); margin-bottom:18px; text-transform:uppercase;">
-        НАСТРОЙКИ ФАЙЛОВ COOKIE
-      </h2>
-
-      <!-- Подзаголовок и цитата с фирменной полосой -->
-      <div style="font-size:16px; font-weight:700; color:var(--ink); margin-bottom:10px;">
-        Положение об использовании файлов cookie
-      </div>
-      
-      <div style="background:var(--white-2); border-left:3px solid var(--rose); padding:14px 16px; font-size:13.5px; color:var(--ink-soft); line-height:1.55; margin-bottom:18px;">
-        Файлы cookie (куки) — это небольшие текстовые файлы, сохраняемые на вашем устройстве при посещении сайтов. Они помогают сайту запоминать настройки и параметры конфиденциальности.
-      </div>
-
-      <!-- Пункт 1 -->
-      <div style="margin-bottom:16px;">
-        <div style="font-size:14.5px; font-weight:700; color:var(--ink); margin-bottom:4px;">
-          1. Зачем мы используем cookie?
-        </div>
-        <div style="font-size:13.5px; color:var(--ink-soft); line-height:1.5;">
-          Мы используем файлы cookie для обеспечения технической работоспособности нашего сайта, ускорения загрузки страниц, анализа поведения пользователей и повышения удобства использования. Все собираемые данные являются обезличенными.
-        </div>
-      </div>
-
-      <!-- Пункт 2 -->
-      <div style="margin-bottom:20px;">
-        <div style="font-size:14.5px; font-weight:700; color:var(--ink); margin-bottom:6px;">
-          2. Какие категории cookie мы используем?
-        </div>
-        <div style="font-size:13.5px; color:var(--ink-soft); line-height:1.55; display:flex; flex-direction:column; gap:6px;">
-          <div><strong style="color:var(--ink);">— Технические (обязательные):</strong> необходимы для работы основных функций сайта. Их отключение невозможно, так как это нарушит нормальное функционирование сайта.</div>
-          <div><strong style="color:var(--ink);">— Аналитические (дополнительные):</strong> используются для подсчета посещений страниц и анализа источников трафика с помощью сервиса Яндекс.Метрика. Вы можете настроить их использование ниже.</div>
-          <div><strong style="color:var(--ink);">— Маркетинговые (дополнительные):</strong> помогают оценивать эффективность наших рекламных кампаний в Яндекс.</div>
-        </div>
-      </div>
-
-      <!-- Пункт 3 -->
-      <div style="margin-bottom:24px;">
-        <div style="font-size:14.5px; font-weight:700; color:var(--ink); margin-bottom:12px;">
-          3. Настроить предпочтения:
-        </div>
-
-        <!-- Карточка 1: Обязательные -->
-        <div style="background:var(--white-2); border:1px solid var(--border); padding:14px 16px; display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-          <div>
-            <div style="font-size:14.5px; font-weight:700; color:var(--ink); margin-bottom:2px;">Обязательные файлы cookie</div>
-            <div style="font-size:12.5px; color:var(--ink-soft);">Необходимы для корректной работы сайта и сохранения ваших настроек конфиденциальности.</div>
-          </div>
-          <input type="checkbox" checked disabled style="width:20px; height:20px; accent-color:var(--rose); cursor:not-allowed;">
-        </div>
-
-        <!-- Карточка 2: Аналитические -->
-        <div style="background:var(--white-2); border:1px solid var(--border); padding:14px 16px; display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; cursor:pointer;" onclick="toggleCheckbox('cookieAnalytics')">
-          <div>
-            <div style="font-size:14.5px; font-weight:700; color:var(--ink); margin-bottom:2px;">Аналитические файлы cookie</div>
-            <div style="font-size:12.5px; color:var(--ink-soft);">Помогают нам оценивать посещаемость сайта и улучшать удобство использования с помощью анонимной статистики Яндекс.Метрики.</div>
-          </div>
-          <input type="checkbox" id="cookieAnalytics" style="width:20px; height:20px; accent-color:var(--rose); cursor:pointer;" onclick="event.stopPropagation()">
-        </div>
-
-        <!-- Карточка 3: Маркетинговые -->
-        <div style="background:var(--white-2); border:1px solid var(--border); padding:14px 16px; display:flex; justify-content:space-between; align-items:center; cursor:pointer;" onclick="toggleCheckbox('cookieMarketing')">
-          <div>
-            <div style="font-size:14.5px; font-weight:700; color:var(--ink); margin-bottom:2px;">Маркетинговые файлы cookie</div>
-            <div style="font-size:12.5px; color:var(--ink-soft);">Позволяют отслеживать эффективность рекламы в Яндекс.Директ и настраивать релевантные спецпредложения.</div>
-          </div>
-          <input type="checkbox" id="cookieMarketing" style="width:20px; height:20px; accent-color:var(--rose); cursor:pointer;" onclick="event.stopPropagation()">
-        </div>
-      </div>
-
-      <!-- Кнопки действий в едином стиле сайта -->
-      <div style="display:flex; gap:12px; justify-content:flex-end; flex-wrap:wrap;">
-        <button type="button" onclick="saveCookiePreferences()" class="btn-outline" style="flex:1; min-width:180px; padding:14px 20px; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; background:var(--white);">
-          СОХРАНИТЬ ВЫБОР
-        </button>
-        <button type="button" onclick="acceptAllCookiesModal()" class="btn-cta" style="flex:1; min-width:180px; padding:14px 20px; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.08em;">
+      <div style="display:flex; gap:12px; justify-content:flex-end;">
+        <button type="button" onclick="acceptCookies(); closeModal('cookiePolicyModal');" class="btn-cta" style="padding:12px 20px;">
           РАЗРЕШИТЬ ВСЕ
         </button>
       </div>
-
     </div>
   </div>
 
-  <!-- 17. МОДАЛЬНОЕ ОКНО 4: ПУБЛИЧНАЯ ОФЕРТА -->
+  <!-- 14. МОДАЛЬНОЕ ОКНО: ОФЕРТА -->
   <div id="userAgreementModal" class="modal-overlay" role="dialog" aria-modal="true">
     <div class="modal-window">
       <button type="button" class="modal-close-btn" onclick="closeModal('userAgreementModal')">×</button>
       <div class="modal-header-tag">Публичная оферта ст. 437 ГК РФ</div>
       <h3 class="modal-title">Пользовательское соглашение и оферта</h3>
       <div class="modal-legal-doc-content">
-        <p>Настоящий документ является публичным предложением (офертой) студии Evelina's Nails заключить договор на оказание косметических услуг ногтевого сервиса.</p>
-        <h3>Условия и правила визита:</h3>
-        <ul>
-          <li>Онлайн-бронирование через сайт является предварительной заявкой и подтверждается мастером;</li>
-          <li>Оплата производится по факту оказания услуг в помещении студии;</li>
-          <li>Студия гарантирует стерильность инструментов и предоставляет гарантию на стойкость покрытия в течение 7 календарных дней.</li>
-        </ul>
+        <p>Бронирование через сайт является предварительной записью. Оплата производится по факту оказания услуг в помещении студии.</p>
       </div>
     </div>
   </div>
 
-  <!-- 18. МОДАЛЬНОЕ ОКНО 5: РЕГЛАМЕНТ РЕАГИРОВАНИЯ НА УТЕЧКИ (24/72 ЧАСА) -->
-  <div id="leakReglamentModal" class="modal-overlay" role="dialog" aria-modal="true">
-    <div class="modal-window">
-      <button type="button" class="modal-close-btn" onclick="closeModal('leakReglamentModal')">×</button>
-      <div class="modal-header-tag">ч. 11-14 ст. 13.11 КоАП РФ</div>
-      <h3 class="modal-title">Регламент реагирования на инциденты безопасности</h3>
-      <div class="modal-legal-doc-content">
-        <p>В соответствии с Федеральным законом № 152-ФЗ Оператором утверждён следующий регламент действий при выявлении несанкционированного доступа:</p>
-        <ul>
-          <li><strong>В течение 24 часов:</strong> уведомление Роскомнадзора об инциденте, предполагаемых причинах и принятых мерах первичной локализации;</li>
-          <li><strong>В течение 72 часов:</strong> проведение внутреннего расследования и направление в Роскомнадзор результатов с указанием виновных лиц (при наличии).</li>
-        </ul>
-        <p>Ответственное лицо за обеспечение безопасности данных: Ковалёв В. М., телефон: +7 (962) 022-54-72.</p>
+  <!-- ПЛАВАЮЩАЯ КОРЗИНА -->
+  <button type="button" id="floatingCartBtn" class="floating-cart-btn" onclick="openCartModal()" aria-label="Открыть корзину">
+    <div style="display:flex; align-items:center; gap:8px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+      </svg>
+      <span>Корзина</span>
+    </div>
+    <div class="cart-badge" id="cartCountBadge">0</div>
+    <span id="cartSumBadge" style="font-family:'Georgia', serif; font-size:15px; padding-left:4px; border-left:1px solid rgba(255,255,255,0.4);">0 ₽</span>
+  </button>
+
+  <!-- МОДАЛЬНОЕ ОКНО КОРЗИНЫ -->
+  <div id="cartModal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-window" style="max-width:560px;">
+      <button type="button" class="modal-close-btn" onclick="closeModal('cartModal')">×</button>
+      <div class="modal-header-tag">Evelina's Nails · Выбранные услуги</div>
+      <h3 id="cartModalTitle" class="modal-title">Ваша корзина</h3>
+      
+      <div id="cartItemsList" style="max-height:280px; overflow-y:auto; margin-bottom:20px;"></div>
+
+      <div class="order-summary-card" style="margin-bottom:20px;">
+        <div class="order-summary-total">
+          <span>Итого к оплате:</span>
+          <span class="price" id="cartModalTotal">0 ₽</span>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <button type="button" class="btn-outline" style="flex:1;" onclick="clearCart()">Очистить</button>
+        <button type="button" class="btn-cta" style="flex:2;" onclick="proceedToCheckoutFromCart()">Оформить запись →</button>
       </div>
     </div>
   </div>
 
-  <!-- 19. СКРИПТЫ САЙТА: ФИКСАЦИЯ И ЛОГИРОВАНИЕ СОГЛАСИЙ С IP И ВРЕМЕНЕМ -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       if (!localStorage.getItem("cookie_consent_accepted")) {
@@ -2971,39 +2239,8 @@
       renderReviewDots();
     });
 
-    
-    function toggleCheckbox(id) {
-      const cb = document.getElementById(id);
-      if (cb) cb.checked = !cb.checked;
-    }
-
-    function saveCookiePreferences() {
-      const analytics = document.getElementById("cookieAnalytics") ? document.getElementById("cookieAnalytics").checked : false;
-      const marketing = document.getElementById("cookieMarketing") ? document.getElementById("cookieMarketing").checked : false;
-      const pref = {
-        technical: true,
-        analytics: analytics,
-        marketing: marketing,
-        timestamp: new Date().toISOString()
-      };
-      localStorage.setItem("cookie_preferences", JSON.stringify(pref));
-      localStorage.setItem("cookie_consent_accepted", "true");
-      closeModal("cookiePolicyModal");
-      const banner = document.getElementById("cookieBanner");
-      if (banner) banner.classList.remove("show");
-    }
-
-    function acceptAllCookiesModal() {
-      const a = document.getElementById("cookieAnalytics");
-      const m = document.getElementById("cookieMarketing");
-      if (a) a.checked = true;
-      if (m) m.checked = true;
-      saveCookiePreferences();
-    }
-
     function acceptCookies() {
       localStorage.setItem("cookie_consent_accepted", "true");
-      localStorage.setItem("cookie_consent_timestamp", new Date().toISOString());
       document.getElementById("cookieBanner").classList.remove("show");
     }
 
@@ -3017,8 +2254,7 @@
     });
 
     function toggleMobileNav() {
-      const drawer = document.getElementById("mobileDrawer");
-      drawer.classList.toggle("open");
+      document.getElementById("mobileDrawer").classList.toggle("open");
     }
 
     function openModal(id) {
@@ -3033,26 +2269,18 @@
 
     document.querySelectorAll(".modal-overlay").forEach(overlay => {
       overlay.addEventListener("click", function (e) {
-        if (e.target === this) {
-          this.classList.remove("open");
-          document.body.style.overflow = "auto";
-        }
+        if (e.target === this) closeModal(this.id);
       });
     });
 
     function openBooking(serviceName) {
       const select = document.getElementById("bookService");
       if (select && serviceName) {
-        let found = false;
         for (let i = 0; i < select.options.length; i++) {
           if (select.options[i].text.includes(serviceName) || select.options[i].value.includes(serviceName)) {
             select.selectedIndex = i;
-            found = true;
             break;
           }
-        }
-        if (!found) {
-          select.value = "Индивидуальный расчёт из калькулятора";
         }
       }
       openModal("bookingModal");
@@ -3067,40 +2295,34 @@
     };
 
     function setCalcBase(btn, price, name) {
-      const parent = btn.parentElement;
-      parent.querySelectorAll(".calc-option-btn").forEach(b => b.classList.remove("active"));
+      btn.parentElement.querySelectorAll(".calc-option-btn").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       calcState.basePrice = price;
       calcState.baseName = name;
       document.getElementById("summaryBaseName").innerText = name;
       document.getElementById("summaryBasePrice").innerText = price.toLocaleString("ru-RU") + " ₽";
       recalcTotal();
-      renderReviewDots();
     }
 
     function setCalcDesign(btn, price, name) {
-      const parent = btn.parentElement;
-      parent.querySelectorAll(".calc-option-btn").forEach(b => b.classList.remove("active"));
+      btn.parentElement.querySelectorAll(".calc-option-btn").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       calcState.designPrice = price;
       calcState.designName = name;
       document.getElementById("summaryDesignName").innerText = name;
       document.getElementById("summaryDesignPrice").innerText = (price > 0 ? "+" : "") + price.toLocaleString("ru-RU") + " ₽";
       recalcTotal();
-      renderReviewDots();
     }
 
     function toggleCalcExtra(btn, price, name) {
       btn.classList.toggle("active");
-      const isActive = btn.classList.contains("active");
-      if (isActive) {
+      if (btn.classList.contains("active")) {
         calcState.extras[name] = price;
       } else {
         delete calcState.extras[name];
       }
       renderExtrasSummary();
       recalcTotal();
-      renderReviewDots();
     }
 
     function renderExtrasSummary() {
@@ -3116,31 +2338,23 @@
 
     function recalcTotal() {
       let total = calcState.basePrice + calcState.designPrice;
-      for (const p of Object.values(calcState.extras)) {
-        total += p;
-      }
+      for (const p of Object.values(calcState.extras)) total += p;
       document.getElementById("calcTotalDisplay").innerText = total.toLocaleString("ru-RU") + " ₽";
       return total;
     }
 
-    
-    // ==========================================
-    // ЛОГИКА КОРЗИНЫ И ТОЧНОГО ПЕРЕНОСА РАСЧЁТА
-    // ==========================================
     let cart = [];
 
     function addToCart(name, price, duration) {
-      cart.push({ name: name, price: price, duration: duration });
+      cart.push({ name, price, duration });
       updateCartUI();
-
-      // Подсветим добавление
       const btn = event ? event.currentTarget : null;
       if (btn) {
-        const originalText = btn.innerHTML;
+        const orig = btn.innerHTML;
         btn.innerHTML = '<span>✓ Добавлено</span>';
         btn.classList.add('added');
         setTimeout(() => {
-          btn.innerHTML = originalText;
+          btn.innerHTML = orig;
           btn.classList.remove('added');
         }, 1500);
       }
@@ -3163,20 +2377,15 @@
       const count = cart.length;
       let total = 0;
       cart.forEach(item => total += item.price);
-
       const cartBtn = document.getElementById("floatingCartBtn");
       const badge = document.getElementById("cartCountBadge");
       const sumBadge = document.getElementById("cartSumBadge");
 
       if (badge) badge.innerText = count;
       if (sumBadge) sumBadge.innerText = total.toLocaleString("ru-RU") + " ₽";
-
       if (cartBtn) {
-        if (count > 0) {
-          cartBtn.classList.add("show");
-        } else {
-          cartBtn.classList.remove("show");
-        }
+        if (count > 0) cartBtn.classList.add("show");
+        else cartBtn.classList.remove("show");
       }
     }
 
@@ -3186,7 +2395,7 @@
       if (!list) return;
 
       if (cart.length === 0) {
-        list.innerHTML = '<div style="color:var(--ink-soft); font-size:14px; text-align:center; padding:20px 0;">Ваша корзина пуста. Добавьте услуги из прайс-листа.</div>';
+        list.innerHTML = '<div style="color:var(--ink-soft); font-size:14px; text-align:center; padding:20px 0;">Ваша корзина пуста.</div>';
         if (totalDisplay) totalDisplay.innerText = "0 ₽";
         return;
       }
@@ -3203,7 +2412,7 @@
             </div>
             <div style="display:flex; align-items:center; gap:12px;">
               <span style="font-weight:700; font-size:15px; color:var(--rose-deep);">${item.price.toLocaleString("ru-RU")} ₽</span>
-              <button type="button" onclick="removeFromCart(${idx})" style="color:#b8aea0; font-size:18px; padding:2px 6px; cursor:pointer;" title="Удалить" onmouseover="this.style.color='#943e4f'" onmouseout="this.style.color='#b8aea0'">×</button>
+              <button type="button" onclick="removeFromCart(${idx})" style="color:#b8aea0; font-size:18px; cursor:pointer;">×</button>
             </div>
           </div>
         `;
@@ -3219,14 +2428,8 @@
     }
 
     function proceedToCheckoutFromCart() {
-      if (cart.length === 0) {
-        alert("Корзина пуста. Пожалуйста, добавьте услуги.");
-        return;
-      }
-
+      if (cart.length === 0) return;
       closeModal("cartModal");
-
-      // Рассчитываем сумму корзины
       let total = 0;
       let servicesListText = [];
       cart.forEach(item => {
@@ -3234,10 +2437,8 @@
         servicesListText.push(item.name + ` (${item.price} ₽)`);
       });
 
-      // Передаем в модальное окно записи
       const select = document.getElementById("bookService");
       if (select) select.value = "Заказ из корзины";
-
       const summaryCard = document.getElementById("bookingOrderSummary");
       const summaryTag = document.getElementById("orderSummaryTag");
       const rows = document.getElementById("orderSummaryRows");
@@ -3263,14 +2464,11 @@
 
       if (totalInput) totalInput.value = total;
       if (detailsInput) detailsInput.value = servicesListText.join(", ");
-
       openModal("bookingModal");
     }
 
-    // Точный перенос расчёта из калькулятора
     function bookCalculatedResult() {
       const total = recalcTotal();
-      renderReviewDots();
       const select = document.getElementById("bookService");
       if (select) select.value = "Индивидуальный расчёт из калькулятора";
 
@@ -3281,10 +2479,7 @@
       const totalInput = document.getElementById("orderTotalInput");
       const detailsInput = document.getElementById("orderDetailsInput");
 
-      let detailsArray = [
-        `Базовая процедура: ${calcState.baseName} (${calcState.basePrice} ₽)`
-      ];
-
+      let detailsArray = [`Базовая процедура: ${calcState.baseName} (${calcState.basePrice} ₽)`];
       let rowsHtml = `
         <div class="order-summary-row">
           <span>• Базовая процедура: ${calcState.baseName}</span>
@@ -3298,13 +2493,6 @@
           <div class="order-summary-row">
             <span>• Дизайн: ${calcState.designName}</span>
             <span style="font-weight:600;">+${calcState.designPrice.toLocaleString("ru-RU")} ₽</span>
-          </div>
-        `;
-      } else {
-        rowsHtml += `
-          <div class="order-summary-row">
-            <span>• Дизайн: Однотон / без рисунка</span>
-            <span style="font-weight:600;">0 ₽</span>
           </div>
         `;
       }
@@ -3328,31 +2516,20 @@
 
       if (totalInput) totalInput.value = total;
       if (detailsInput) detailsInput.value = detailsArray.join(" | ");
-
       openModal("bookingModal");
     }
 
     function handleServiceSelectChange(sel) {
       const summaryCard = document.getElementById("bookingOrderSummary");
-      const totalInput = document.getElementById("orderTotalInput");
-      const detailsInput = document.getElementById("orderDetailsInput");
-
       if (sel.value === "Индивидуальный расчёт из калькулятора") {
         bookCalculatedResult();
       } else if (sel.value === "Заказ из корзины") {
-        if (cart.length > 0) {
-          proceedToCheckoutFromCart();
-        } else {
-          if (summaryCard) summaryCard.style.display = "none";
-        }
+        if (cart.length > 0) proceedToCheckoutFromCart();
+        else if (summaryCard) summaryCard.style.display = "none";
       } else {
-        // Обычная услуга из списка
         if (summaryCard) summaryCard.style.display = "none";
-        if (totalInput) totalInput.value = "";
-        if (detailsInput) detailsInput.value = sel.value;
       }
     }
-
 
     const reviewsData = [
       {
@@ -3369,26 +2546,6 @@
         quote: "«Очень понравился маникюр, все аккуратно и безумно красиво. Эвелина мастер своего дела, делает быстро, качественно и с учётом всех пожеланий клиента. Так же было очень приятно получить подарок! Рекомендую!»",
         author: "Владислава Марченко",
         badge: "Знаток города 3 уровня · Яндекс.Карты"
-      },
-      {
-        quote: "«Прекрасный мастер! Ногти держатся идеально больше трёх-четырёх недель без единого скола и отслоек. Атмосфера в студии очень уютная, спокойная и располагающая к отдыху.»",
-        author: "Кристина В.",
-        badge: "Клиент студии · Яндекс.Карты"
-      },
-      {
-        quote: "«Делала укрепление гелем и педикюр. Всё на высшем уровне: идеальная чистота, стерильные инструменты вскрываются из крафт-пакета при тебе, удобное кресло. Ногти крепкие и аккуратные!»",
-        author: "Елена С.",
-        badge: "Постоянный клиент · Яндекс.Карты"
-      },
-      {
-        quote: "«Очень довольна работой Эвелины! Салонное наращивание получилось тонким, прочным и максимально естественным. Форма идеальная, аккуратный блик. Однозначно рекомендую!»",
-        author: "Диана К.",
-        badge: "Клиент студии · Яндекс.Карты"
-      },
-      {
-        quote: "«Хожу к Эвелине уже длительное время. Всегда пунктуально, качественно, безболезненно и с чутким вниманием к деталям. Покрытие носится превосходно!»",
-        author: "Марина Т.",
-        badge: "Знаток города · Яндекс.Карты"
       }
     ];
 
@@ -3415,13 +2572,11 @@
     }
 
     function nextReview() {
-      const next = (currentReview + 1) % reviewsData.length;
-      renderReview(next);
+      renderReview((currentReview + 1) % reviewsData.length);
     }
 
     function prevReview() {
-      const prev = (currentReview - 1 + reviewsData.length) % reviewsData.length;
-      renderReview(prev);
+      renderReview((currentReview - 1 + reviewsData.length) % reviewsData.length);
     }
 
     function setReview(idx) {
@@ -3433,140 +2588,56 @@
     function toggleFaq(btn) {
       const item = btn.parentElement;
       const wasActive = item.classList.contains("active");
-      
-      // Закрываем другие пункты
-      document.querySelectorAll(".faq-item").forEach(i => {
-        i.classList.remove("active");
-      });
-
-      // Переключаем текущий
-      if (!wasActive) {
-        item.classList.add("active");
-      }
+      document.querySelectorAll(".faq-item").forEach(i => i.classList.remove("active"));
+      if (!wasActive) item.classList.add("active");
     }
 
-    function handleBookingSubmit(e) {
-      e.preventDefault();
+    function sendBooking(platform) {
+      const nameField = document.getElementById("clientName");
+      const phoneField = document.getElementById("clientPhone");
       
-      const consentPd = document.getElementById("consentPdCheckbox").checked;
-      const consentTerms = document.getElementById("consentTermsCheckbox").checked;
-      const consentAd = document.getElementById("consentAdCheckbox").checked;
-
-      if (!consentPd || !consentTerms) {
-        alert("Пожалуйста, подтвердите согласие на обработку персональных данных и условия публичной оферты.");
+      if (!nameField.checkValidity() || !phoneField.checkValidity()) {
+        nameField.reportValidity();
+        phoneField.reportValidity();
         return;
       }
 
-      const service = document.getElementById("bookService").value;
-      const name = document.getElementById("clientName").value.trim();
-      const phone = document.getElementById("clientPhone").value.trim();
+      const pdCheckbox = document.getElementById("consentPdCheckbox");
+      const termsCheckbox = document.getElementById("consentTermsCheckbox");
+      if (pdCheckbox && !pdCheckbox.checked) {
+        alert("Пожалуйста, подтвердите согласие на обработку персональных данных.");
+        pdCheckbox.focus();
+        return;
+      }
+      if (termsCheckbox && !termsCheckbox.checked) {
+        alert("Пожалуйста, примите условия Пользовательского соглашения и Публичной оферты.");
+        termsCheckbox.focus();
+        return;
+      }
+
+      const name = nameField.value.trim();
+      const phone = phoneField.value.trim();
       const date = document.getElementById("clientDate").value;
+      const service = document.getElementById("bookService").value;
       const orderTotal = document.getElementById("orderTotalInput").value;
       const orderDetails = document.getElementById("orderDetailsInput").value;
 
-      let formattedDetails = orderDetails ? orderDetails : service;
-      let totalText = orderTotal ? `${parseInt(orderTotal).toLocaleString("ru-RU")} ₽` : "по прейскуранту";
-
-      const auditLog = {
-        consentVersion: "2026.1",
-        timestamp: new Date().toISOString(),
-        dateTimeLocal: new Date().toLocaleString("ru-RU"),
-        clientName: name,
-        clientPhone: phone,
-        selectedService: service,
-        orderDetails: formattedDetails,
-        orderTotal: totalText,
-        preferredDate: date || "Ближайшее окно",
-        consentPersonalData: true,
-        consentTermsAndOffer: true,
-        consentMarketingAds: consentAd,
-        userAgent: navigator.userAgent
-      };
-
-      let existingLogs = [];
-      try {
-        existingLogs = JSON.parse(localStorage.getItem("rkn_consent_audit_trail") || "[]");
-      } catch (err) {}
-      existingLogs.push(auditLog);
-      localStorage.setItem("rkn_consent_audit_trail", JSON.stringify(existingLogs));
-
-      // Формирование красивого детализированного сообщения для WhatsApp
-      let msgLines = [
-        `Здравствуйте, Эвелина!`,
-        `Заявка на запись в студию Evelina's Nails:`,
-        `• Клиент: ${name}`,
-        `• Телефон: ${phone}`,
-        `• Услуга / Тип: ${service}`
-      ];
-
-      if (orderDetails) {
-        msgLines.push(`• Состав заказа: ${orderDetails}`);
-      }
-
+      let msg = `Здравствуйте, Эвелина!\nЗаявка на запись:\n• Клиент: ${name}\n• Телефон: ${phone}\n• Услуга: ${orderDetails || service}`;
       if (orderTotal && parseInt(orderTotal) > 0) {
-        msgLines.push(`• Итоговая сумма: ${parseInt(orderTotal).toLocaleString("ru-RU")} ₽`);
+        msg += `\n• Сумма: ${parseInt(orderTotal).toLocaleString("ru-RU")} ₽`;
       }
-
-      msgLines.push(`• Дата и время: ${date || 'Ближайшее свободное окно'}`);
-
-      const waMessage = encodeURIComponent(msgLines.join("\n"));
-      const waUrl = `https://wa.me/79620225472?text=${waMessage}`;
+      msg += `\n• Дата: ${date || 'Ближайшее окно'}`;
 
       closeModal("bookingModal");
-      
-      // Очищаем корзину после оформления заказа
-      if (service === "Заказ из корзины") {
-        clearCart();
-      }
+      if (service === "Заказ из корзины") clearCart();
 
-      if (confirm(`Спасибо, ${name}! Заявка сформирована (Итого: ${totalText}).\nОткрыть WhatsApp для мгновенного подтверждения времени у Эвелины?`)) {
-        window.open(waUrl, "_blank");
+      const encodedMsg = encodeURIComponent(msg);
+      if (platform === 'whatsapp') {
+        window.open(`https://wa.me/79620225472?text=${encodedMsg}`, "_blank");
+      } else if (platform === 'telegram') {
+        window.open(`https://t.me/+79620225472?text=${encodedMsg}`, "_blank");
       }
     }
   </script>
-
-  <!-- ПЛАВАЮЩАЯ КОРЗИНА В ПРАВОМ УГЛУ -->
-  <button type="button" id="floatingCartBtn" class="floating-cart-btn" onclick="openCartModal()" aria-label="Открыть корзину выбранных услуг">
-    <div style="display:flex; align-items:center; gap:8px;">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="9" cy="21" r="1"></circle>
-        <circle cx="20" cy="21" r="1"></circle>
-        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-      </svg>
-      <span>Корзина</span>
-    </div>
-    <div class="cart-badge" id="cartCountBadge">0</div>
-    <span id="cartSumBadge" style="font-family:'Georgia', serif; font-size:15px; padding-left:4px; border-left:1px solid rgba(255,255,255,0.4);">0 ₽</span>
-  </button>
-
-  <!-- МОДАЛЬНОЕ ОКНО КОРЗИНЫ -->
-  <div id="cartModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="cartModalTitle">
-    <div class="modal-window" style="max-width:560px;">
-      <button type="button" class="modal-close-btn" onclick="closeModal('cartModal')" aria-label="Закрыть корзину">×</button>
-      <div class="modal-header-tag">Evelina's Nails · Выбранные услуги</div>
-      <h3 id="cartModalTitle" class="modal-title">Ваша корзина</h3>
-      
-      <div id="cartItemsList" style="max-height:280px; overflow-y:auto; margin-bottom:20px;">
-        <!-- Динамический список выбранных услуг -->
-      </div>
-
-      <div class="order-summary-card" style="margin-bottom:20px;">
-        <div class="order-summary-total">
-          <span>Итого к оплате:</span>
-          <span class="price" id="cartModalTotal">0 ₽</span>
-        </div>
-      </div>
-
-      <div style="display:flex; gap:10px; flex-wrap:wrap;">
-        <button type="button" class="btn-outline" style="flex:1;" onclick="clearCart()">
-          Очистить
-        </button>
-        <button type="button" class="btn-cta" style="flex:2;" onclick="proceedToCheckoutFromCart()">
-          Оформить запись →
-        </button>
-      </div>
-    </div>
-  </div>
-
 </body>
 </html>
